@@ -85,6 +85,32 @@
             overflow: hidden; /* Hide any overflowing content within the card */
         }
 
+        @media (max-width: 768px) {
+        /* For screens smaller than 768px (e.g., tablets) */
+        .product {
+            flex: 0 0 calc(50% - 20px); /* Two products per row with spacing */
+            background-color: #fff;
+            border: 1px solid #ccc;
+            text-align: center;
+            height : 350px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+        }
+    }
+
+    @media (max-width: 480px) {
+        /* For screens smaller than 480px (e.g., smartphones) */
+        .product {
+            flex: 0 0 100%; /* One product per row, full width */
+            background-color: #fff;
+            border: 1px solid #ccc;
+            text-align: center;
+            height : 350px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+        }
+    }
+
         /* Specify a fixed height for each product card */
         .product img {
             max-width: 100%;
