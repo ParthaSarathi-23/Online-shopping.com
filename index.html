@@ -7,21 +7,15 @@
     <style>
         /* Reset some default browser styles */
         body, h1, h2, p {
-            margin: 1;
+            margin: 0;
             padding: 0;
         }
 
         /* Global styles */
         body {
-            position: relative;
             font-family: Arial, sans-serif;
             background-color: #060606;
-            color: #333;
-            background-image: url('Background_img.png'); /* Specify the path to your background image */
-            background-size: 500px 500px; /* Cover the entire viewport with the background image */
-            background-repeat: no-repeat; /* Prevent the background image from repeating */
-            background-attachment: fixed; /* Fix the background image in place */
-            background-position: center center; /* Center the background image */
+            color: #333; /* Specify the path to your background image */
         }
 
         header {
@@ -80,9 +74,9 @@
         .products {
             display: flex;
             flex-wrap: nowrap; /* Prevent wrapping to the next row */
+            justify-content: flex-start;
             gap: 20px; /* Add spacing between products */ /* Add horizontal scrollbar when content overflows */
-            max-width: 100%; /* Ensure the container is not wider than its parent */
-        }
+            }
 
         /* Modify the .product class */
         .product {
@@ -94,7 +88,6 @@
             box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
             overflow: hidden; /* Hide any overflowing content within the card */
             border-radius: 25px;
-            perspective: 1000px;
         }
 
         /* Specify a fixed height for each product card */
@@ -183,10 +176,10 @@
         }
 
         .share-buttons-container {
-            position: relative;
-            bottom: 20px; /* Adjust the top value as needed */
-            left: 600px; /* Adjust the right value as needed */
-            z-index: 1000; /* Ensure it appears above other content */
+            position: absolute;
+            left : 27%;
+            bottom: -140%; /* Position it in the vertical center */
+            transform: translate(50%, 50%);
         }
 
         .a2a_kit_size_32 a {
@@ -219,10 +212,10 @@
             }
 
             .share-buttons-container {
-                position: relative;
-                bottom: 20px; /* Adjust the top value as needed */
-                left: 175px; /* Adjust the right value as needed */
-                z-index: 1000; /* Ensure it appears above other content */
+                position: absolute;
+                left : -20%;
+                bottom: -142%; /* Position it in the vertical center */
+                transform: translate(50%, 50%);
             }
 
             .a2a_kit_size_32 a {
@@ -254,16 +247,31 @@
         }
 
         .share-buttons-container {
-            position: relative;
-            bottom: 20px; /* Adjust the top value as needed */
-            left: 20px; /* Adjust the right value as needed */
-            z-index: 1000; /* Ensure it appears above other content */
+            position: absolute;
+            left : -6%;
+            bottom: -140%; /* Position it in the vertical center */
+            transform: translate(25%, 50%);
         }
             
     
         .a2a_kit_size_32 a {
             font-size: 16px; /* Reduce the font size for smaller screens */
         }
+    }
+
+    .image-container {
+        display: flex;
+        height: 300px; /* Take up the full height of the fixed page */
+        overflow-x: scroll;
+        max-width: 100%;
+        flex-wrap: nowrap;
+    }
+    
+    /* Style individual images within the container */
+    .image-container img {
+        max-width: 1000px; /* Ensure the image doesn't exceed the container width */
+        max-height: 300px; /* Ensure the image doesn't exceed the container height */
+        object-fit: contain; /* Maintain aspect ratio while fitting within the container */
     }
 
     </style>
@@ -289,7 +297,18 @@
         </nav>
     </header>
 
+    
+
     <main>
+
+        <div class="fixed-page">
+            <div class="image-container">
+                <img src="https://shubhamsharma3060.files.wordpress.com/2021/03/20210305_211441.jpg?w=1024" alt="Image 1">
+                <img src="https://shubhamsharma3060.files.wordpress.com/2021/03/20210305_211441.jpg?w=1024" alt="Image 1">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPcOPvK3lhcYVUZe7YcURIHnQ9MRVDCDo9RzB6mcqSZAMVm7dT7tyghmLzYqydEb3mt-w&usqp=CAU" alt="Image 2">
+            </div>
+        </div>
+
         <section>
             <div class="center-align"> <!-- Apply the center-align class here -->
                 <h2>Hot Products</h2>
