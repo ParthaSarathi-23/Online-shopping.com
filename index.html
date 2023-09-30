@@ -24,13 +24,6 @@
             background-position: center center; /* Center the background image */
         }
 
-        @media (max-width: 480px) {
-            body {
-                position: cover;
-                background-size: 250px 250px; /* Cover the entire viewport with the background image */
-                }
-        }
-
         header {
             background-color: #007bff;
             color: #fff;
@@ -66,6 +59,16 @@
             text-decoration: none;
         }
 
+        .nav-icon {
+            font-size: 28px; /* Adjust as needed */
+            transition: transform 0.2s ease-in-out;
+            margin-right: 10px;
+        }
+
+        .nav-icon:hover {
+            transform: scale(1.2); /* Increase the size of the icon on hover */
+        }
+
         main {
             max-width: 1200px;
             margin: 20px auto;
@@ -83,40 +86,16 @@
 
         /* Modify the .product class */
         .product {
-            flex: 0 0 calc(20% - 20px); /* Two products per row with spacing */
+            flex: 0 0 calc(25% - 20px); /* Two products per row with spacing */
             background-color: #fff;
             border: 1px solid #ccc;
             text-align: center;
             height : 350px;
             box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
             overflow: hidden; /* Hide any overflowing content within the card */
+            border-radius: 25px;
+            perspective: 1000px;
         }
-
-        @media (max-width: 768px) {
-        /* For screens smaller than 768px (e.g., tablets) */
-        .product {
-            flex: 0 0 calc(50% - 20px); /* Two products per row with spacing */
-            background-color: #fff;
-            border: 1px solid #ccc;
-            text-align: center;
-            height : 350px;
-            box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-            overflow: hidden;
-        }
-    }
-
-    @media (max-width: 480px) {
-        /* For screens smaller than 480px (e.g., smartphones) */
-        .product {
-            flex: 0 0 100%; /* One product per row, full width */
-            background-color: #fff;
-            border: 1px solid #ccc;
-            text-align: center;
-            height : 350px;
-            box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-            overflow: hidden;
-        }
-    }
 
         /* Specify a fixed height for each product card */
         .product img {
@@ -149,6 +128,7 @@
             cursor: pointer;
             transition: background-color 0.3s;
             background: linear-gradient(to bottom, #007bff, #549ff5);
+            border-radius: 5%;
         }
 
         .product button:hover {
@@ -209,10 +189,10 @@
             z-index: 1000; /* Ensure it appears above other content */
         }
 
-    .a2a_kit_size_32 a {
-        display: inline-block; /* Display the share buttons horizontally */
-        margin: 0 5px; /* Add spacing between share buttons */
-    }
+        .a2a_kit_size_32 a {
+            display: inline-block; /* Display the share buttons horizontally */
+            margin: 0 5px; /* Add spacing between share buttons */
+        }
 
         @media (max-width: 768px) {
             header h1 {
@@ -222,23 +202,69 @@
             h2 {
                 font-size: 28px;
             }
-        }
 
-        @media screen and (max-width: 480px) {
+            .nav-icon {
+                font-size: 25px; /* Adjust as needed */
+                margin-right: 2px;
+            }
+
+            .product {
+                flex: 0 0 calc(60% - 20px); /* Two products per row with spacing */
+                background-color: #fff;
+                border: 1px solid #ccc;
+                text-align: center;
+                height : 350px;
+                box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+                overflow: hidden;
+            }
 
             .share-buttons-container {
+                position: relative;
+                bottom: 20px; /* Adjust the top value as needed */
+                left: 175px; /* Adjust the right value as needed */
+                z-index: 1000; /* Ensure it appears above other content */
+            }
+
+            .a2a_kit_size_32 a {
+                font-size: 16px; /* Reduce the font size for smaller screens */
+            }
+        }
+
+
+    @media (max-width: 480px) {
+        body {
+            position: cover;
+            background-size: 250px 250px; /* Cover the entire viewport with the background image */
+            }
+
+            .nav-icon {
+                font-size: 16.5px; /* Adjust as needed */
+                margin-right: 0px;
+            }
+
+            /* For screens smaller than 480px (e.g., smartphones) */
+        .product {
+            flex: 0 0 70%; /* One product per row, full width */
+            background-color: #fff;
+            border: 1px solid #ccc;
+            text-align: center;
+            height : 350px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+        }
+
+        .share-buttons-container {
             position: relative;
             bottom: 20px; /* Adjust the top value as needed */
             left: 20px; /* Adjust the right value as needed */
             z-index: 1000; /* Ensure it appears above other content */
         }
-        
-
+            
+    
         .a2a_kit_size_32 a {
             font-size: 16px; /* Reduce the font size for smaller screens */
         }
     }
-        
 
     </style>
 
@@ -251,9 +277,14 @@
 
         <nav>
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="About_Us.html">About Us</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="index.html"><i class="fas fa-home nav-icon"></i></a></li>
+                <li><a href="Watch.html"><i class="fas fa-clock nav-icon"></i></a></li>
+                <li><a href="Phone.html"><i class="fas fa-mobile fa-shake nav-icon"></i></a></li>
+                <li><a href="Shoe.html"><i class="fas fa-shoe-prints nav-icon"></i></a></li>
+                <li><a href="Earphone.html"><i class="fas fa-headphones nav-icon"></i></a></li>
+                <li><a href="Laptop.html"><i class="fas fa-laptop nav-icon"></i></a></li>
+                <li><a href="Storage_Device.html"><i class="fas fa-hdd nav-icon"></i></a></li>
+                <li><a href="Sport.html"><i class="fas fa-futbol nav-icon"></i></a></li>
             </ul>
         </nav>
     </header>
