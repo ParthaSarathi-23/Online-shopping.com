@@ -218,9 +218,16 @@
         }
 
         @media screen and (max-width: 768px) {
+            .share-buttons-container {
+        position: relative;
+            bottom: 20px; /* Adjust the top value as needed */
+            left: 500px; /* Adjust the right value as needed */
+            z-index: 1000; /* Add space between the main content and share buttons */
+    }
         .a2a_kit_size_32 a {
-            font-size: 16px; /* Reduce the font size for smaller screens */
-        }
+        display: inline-block; /* Display the share buttons horizontally */
+        margin: 0 5px; /* Add spacing between share buttons */
+    }
     }
         
 
