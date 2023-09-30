@@ -26,6 +26,7 @@
 
         @media (max-width: 480px) {
             body {
+                position: cover;
                 background-size: 250px 250px; /* Cover the entire viewport with the background image */
                 }
         }
@@ -223,12 +224,14 @@
             }
         }
 
-        @media screen and (max-width: 768px) {
+        @media screen and (max-width: 480px) {
 
             .share-buttons-container {
-                text-align: center;
-                margin: 20px 0; /* Add space between the main content and share buttons */
-            }
+            position: relative;
+            bottom: 20px; /* Adjust the top value as needed */
+            left: 60px; /* Adjust the right value as needed */
+            z-index: 1000; /* Ensure it appears above other content */
+        }
         
 
         .a2a_kit_size_32 a {
