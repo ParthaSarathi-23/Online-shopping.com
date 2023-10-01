@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Sales - Home</title>
+    <style>
+        /* Reset some default browser styles */
+        body, h1, h2, p {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Global styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #060606;
+            color: #333; /* Specify the path to your background image */
+        }
+
+        header {
+            background-color: #007bff;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 36px;
+        }
+
+        h2 {
+            font-size: 40px;
+            text-shadow: 2px 2px 4px rgba(13, 13, 13, 0.2);
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .nav-icon {
+            font-size: 28px; /* Adjust as needed */
+            transition: transform 0.2s ease-in-out;
+            margin-right: 10px;
+        }
+
+        .nav-icon:hover {
+            transform: scale(1.2); /* Increase the size of the icon on hover */
+        }
+
+        main {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+
+        /* Style for product containers */
+        /* Modify the .products class to use CSS Flexbox */
+        .products {
+            display: flex;
+            flex-wrap: nowrap; /* Prevent wrapping to the next row */
+            justify-content: flex-start;
+            gap: 20px; /* Add spacing between products */ /* Add horizontal scrollbar when content overflows */
+            }
+
+        /* Modify the .product class */
+        .product {
+            flex: 0 0 calc(25% - 20px); /* Two products per row with spacing */
+            background-color: #fff;
+            border: 1px solid #ccc;
+            text-align: center;
+            height : 350px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+            overflow: hidden; /* Hide any overflowing content within the card */
+            border-radius: 25px;
+        }
+
+        .product-description {
+            padding: 10px; /* Add padding to the description container */
+            text-align: left;
+        }
+
+        /* Specify a fixed height for each product card */
+        .product img {
+            max-width: 100%;
+            height: auto;
+            max-height: 150px; /* Set a fixed height for the product images */
+        }
+
+        /* Example for product images */
+        .product img:hover {
+            transform: scale(1.15); /* Enlarge the image on hover */
+        }
+
+        .product h3 {
+            font-size: 20px;
+            margin-top: 10px;
+        }
+
+        .product p {
+            font-size: 16px;
+            margin: 10px 0;
+        }
+
+        .product button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            background: linear-gradient(to bottom, #007bff, #549ff5);
+            border-radius: 5%;
+            align-self: center;
+        }
+
+        .product-details {
+            flex: 1;
+            overflow: auto; /* Enable vertical scrolling if needed */
+            max-width: 60%; /* Set a fixed width for the details */
+        }
+        
+        /* Style the product title */
+        .product-title {
+            font-size: 24px;
+            margin: 0;
+            color: #333;
+        }
+
+        .product-info {
+            list-style-type: none;
+            padding: 0;
+            margin: 10px 0;
+        }
+        
+        /* Style each item in the product info list */
+        .product-info li {
+            margin-bottom: 5px;
+        }
+        
+        /* Style the Font Awesome icons */
+        .product-info li i {
+            margin-right: 10px;
+            color: #007BFF; /* Change the icon color to your preference */
+        }
+
+        .product button:hover {
+            background: linear-gradient(to bottom, #0b0b0b, #5d5d5e); /* Change the gradient colors on hover */
+        }
+
+        .offer {
+            background-color: #f2f2f2;
+            padding: 20px;
+            margin: 10px;
+            text-align: center;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+        }
+
+        .offer img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .scrollable {
+            overflow-y: hidden; /* Add horizontal scrollbar when content overflows */
+            overflow-x: auto;
+            max-height: 750px; /* Set a fixed height for the container */
+        }
+
+        /* Style the scrollbar track (the background) */
+        .scrollable::-webkit-scrollbar {
+            width: 5px; /* Adjust the width of the scrollbar as needed */
+        }
+
+        /* Style the scrollbar thumb (the draggable handle) */
+        .scrollable::-webkit-scrollbar-thumb {
+            background-color: #007bff; /* Color of the thumb */
+            border-radius: 7.5px; /* Round the corners of the thumb */
+            height: 20px; 
+        }
+
+        /* Style the scrollbar track when hovered */
+        .scrollable::-webkit-scrollbar-thumb:hover {
+            background-color: #0056b3; /* Color when hovered */
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+        }
+
+        .center-align {
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 28px;
+            }
+
+            h2 {
+                font-size: 28px;
+            }
+
+            .nav-icon {
+                font-size: 25px; /* Adjust as needed */
+                margin-right: 2px;
+            }
+
+            .product {
+                flex: 0 0 calc(60% - 20px); /* Two products per row with spacing */
+                background-color: #fff;
+                border: 1px solid #ccc;
+                text-align: center;
+                height : 350px;
+                box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+                overflow: hidden;
+            }
+        }
+
+
+    @media (max-width: 480px) {
+        body {
+            position: cover;
+            background-size: 250px 250px; /* Cover the entire viewport with the background image */
+            }
+
+            .nav-icon {
+                font-size: 16.5px; /* Adjust as needed */
+                margin-right: 0px;
+            }
+
+            /* For screens smaller than 480px (e.g., smartphones) */
+        .product {
+            flex: 0 0 70%; /* One product per row, full width */
+            background-color: #fff;
+            border: 1px solid #ccc;
+            text-align: center;
+            height : 350px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+        }
+    }
+
+    .image-container {
+        display: flex;
+        height: 300px; /* Take up the full height of the fixed page */
+        overflow-x: scroll;
+        max-width: 100%;
+        flex-wrap: nowrap;
+    }
+    
+    /* Style individual images within the container */
+    .image-container img {
+        max-width: 1000px; /* Ensure the image doesn't exceed the container width */
+        max-height: 300px; /* Ensure the image doesn't exceed the container height */
+        object-fit: contain; /* Maintain aspect ratio while fitting within the container */
+    }
+
+    </style>
+
+</head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+<body>
+    <header>
+        <h1>Welcome to Our Store</h1>
+
+        <nav>
+            <ul>
+                <li><a href="index.html"><i class="fas fa-home nav-icon"></i></a></li>
+                <li><a href="Watch.html"><i class="fas fa-clock nav-icon"></i></a></li>
+                <li><a href="Phone.html"><i class="fas fa-mobile fa-shake nav-icon"></i></a></li>
+                <li><a href="Shoe.html"><i class="fas fa-shoe-prints nav-icon"></i></a></li>
+                <li><a href="Earphone.html"><i class="fas fa-headphones nav-icon"></i></a></li>
+                <li><a href="Laptop.html"><i class="fas fa-laptop nav-icon"></i></a></li>
+                <li><a href="Storage_Device.html"><i class="fas fa-hdd nav-icon"></i></a></li>
+                <li><a href="Sport.html"><i class="fas fa-futbol nav-icon"></i></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    
+
+    <main>
+
+        <div class="fixed-page">
+            <div class="image-container">
+                <img src="https://shubhamsharma3060.files.wordpress.com/2021/03/20210305_211441.jpg?w=1024" alt="Image 1">
+                <img src="https://shubhamsharma3060.files.wordpress.com/2021/03/20210305_211441.jpg?w=1024" alt="Image 1">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPcOPvK3lhcYVUZe7YcURIHnQ9MRVDCDo9RzB6mcqSZAMVm7dT7tyghmLzYqydEb3mt-w&usqp=CAU" alt="Image 2">
+            </div>
+        </div>
+
+        <section>
+            <div class="center-align"> <!-- Apply the center-align class here -->
+                <h2>Hot Products</h2>
+            </div>
+
+            <br><br>
+
+            <div class="scrollable"> <!-- Wrap hot products in a container div with scrollbar -->
+                <div class="products">
+                    <div class="product">
+                        <img src="https://m.media-amazon.com/images/I/51WqJe7UhdL._UY695_.jpg" alt="Hot Product 1">
+                        <h3 class="product-title">BATA</h3>
+                        <div class="product-description">
+                            <ul class="product-info">
+                                <li><i class="fas fa-tag"></i> Brand: BATA</li>
+                                <li><i class="fas fa-paint-brush"></i> Color: [Add color here]</li>
+                                <li><i class="fas fa-shoe-prints"></i> Sole Type: Rubber</li>
+                                <li><i class="fas fa-lock"></i> Closure: Lace-Up</li>
+                            </ul>
+                        </div>
+                        <div class="buy-now-button">
+                            <a href="https://amzn.to/3RLMeTn">
+                                <button class="buy-button">Buy Now</button>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="product">
+                        <img src="https://m.media-amazon.com/images/I/71GIt0yxeBL._UY695_.jpg" alt="Hot Product 1">
+                        <h3>Paragon K1012G Men Casual Shoes | Stylish Walking </h3>
+                        <p>Description of Hot Product 1. Lorem ipsum dolor sit amet.</p>
+                        <a href="https://amzn.to/460XCif">
+                            <button>Buy Now</button>
+                        </a>
+                    </div>
+
+                    <div class="product">
+                        <img src="https://m.media-amazon.com/images/I/71YYFRuXmjL._UY695_.jpg" alt="Hot Product 1">
+                        <h3>ASIAN TARZAN-04 Men's Casual White Sneaker Shoes </h3>
+                        <p>Description of Hot Product 1. Lorem ipsum dolor sit amet.</p>
+                        <a href="https://amzn.to/3Pq5xhZ">
+                            <button>Buy Now</button>
+                        </a>
+                    </div>
+
+                    <div class="product">
+                        <img src="https://m.media-amazon.com/images/I/71IqhHYq+DL._UX695_.jpg" alt="Hot Product 1">
+                        <h3>Sparx Mens Sm-747 Sneaker  </h3>
+                        <p>Description of Hot Product 1. Lorem ipsum dolor sit amet.</p>
+                        <a href="https://amzn.to/3PL3bfc">
+                            <button>Buy Now</button>
+                        </a>
+                    </div>
+
+                    <div class="product">
+                        <img src="https://m.media-amazon.com/images/I/81JETmRJe2L._UY695_.jpg" alt="Hot Product 1">
+                        <h3>US Polo Association Mens Abor Sneakers  </h3>
+                        <p>Description of Hot Product 1. Lorem ipsum dolor sit amet.</p>
+                        <a href="https://amzn.to/3PuUvIv">
+                            <button>Buy Now</button>
+                        </a>
+                    </div>
+
+                    <div class="product">
+                        <img src="https://m.media-amazon.com/images/I/6162xoD9kqL._UY695_.jpg" alt="Hot Product 1">
+                        <h3>Centrino Mens 3211 Sneakers </h3>
+                        <p>Description of Hot Product 1. Lorem ipsum dolor sit amet.</p>
+                        <a href="https://amzn.to/3RAFjwd">
+                            <button>Buy Now</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <br><br>
+
+        <section>
+            <div class="center-align">
+                <h2>Top Selling Products</h2>
+            </div>
+
+            <br><br>
+
+            <div class="scrollable">
+                <div class="products">
+                    <div class="product">
+                        <img src="top_selling_product1.jpg" alt="Top Selling Product 1">
+                        <h3>Top Selling Product 1</h3>
+                        <p>Description of Top Selling Product 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <p>Price: $129.99</p>
+                        <button>Add to Cart</button>
+                    </div>
+
+                    <div class="product">
+                        <img src="top_selling_product2.jpg" alt="Top Selling Product 2">
+                        <h3>Top Selling Product 2</h3>
+                        <p>Description of Top Selling Product 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <p>Price: $99.99</p>
+                        <button>Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <br><br>
+
+        <section>
+            <h2>Offers</h2>
+            <br><br>
+            <div class="scrollable"></div>
+                <div class="offer">
+                    <img src="offer_banner.jpg" alt="Special Offer">
+                    <p>Special Offer: Get 20% off on all products. Use code: SPECIAL20</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+            
+    <script async src="https://static.addtoany.com/menu/page.js"></script>
+    
+    <footer>
+        <p>&copy; 2023 Your Company Name</p>
+        <p>Contact Us: contact@yourcompany.com</p>
+    </footer>
+</body>
+</html>
