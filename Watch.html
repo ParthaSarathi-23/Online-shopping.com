@@ -204,13 +204,6 @@
             background-color: #0056b3; /* Color when hovered */
         }
 
-        footer {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 10px;
-        }
-
         .center-align {
             text-align: center;
         }
@@ -266,7 +259,7 @@
 
     .image-container {
         display: flex;
-        height: 300px; /* Take up the full height of the fixed page */
+        height: 500px; /* Take up the full height of the fixed page */
         overflow-x: scroll;
         max-width: 100%;
         flex-wrap: nowrap;
@@ -275,7 +268,7 @@
     /* Style individual images within the container */
     .image-container img {
         max-width: 1000px; /* Ensure the image doesn't exceed the container width */
-        max-height: 300px; /* Ensure the image doesn't exceed the container height */
+        max-height: 600px; /* Ensure the image doesn't exceed the container height */
         object-fit: contain; /* Maintain aspect ratio while fitting within the container */
     }
 
@@ -318,13 +311,17 @@
 
     <main>
 
-        <div class="fixed-page">
+        <div class="scrollable">>
             <div class="image-container">
-                <img src="https://mir-s3-cdn-cf.behance.net/projects/404/f9fcfd142271391.Y3JvcCwyMjM0LDE3NDgsMTIxLDA.jpg" alt="Image 1">
-                <img src="https://www.passionateinmarketing.com/wp-content/uploads/2021/12/brandma-bata.jpg" alt="Image 1">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPcOPvK3lhcYVUZe7YcURIHnQ9MRVDCDo9RzB6mcqSZAMVm7dT7tyghmLzYqydEb3mt-w&usqp=CAU" alt="Image 2">
+                <img src="https://m.media-amazon.com/images/S/aplus-media-library-service-media/69a0566d-cb45-4c3a-bac9-5508a0332df2.__CR0,0,1464,600_PT0_SX1464_V1___.png" alt="Image 1">
+                <img src="https://m.media-amazon.com/images/S/aplus-media-library-service-media/de1ac715-fbeb-4563-9a5a-16528abf83ce.__CR0,0,1464,600_PT0_SX1464_V1___.jpg" alt="Image 1">
+                <img src="https://m.media-amazon.com/images/S/aplus-media-library-service-media/e77ec801-f517-472d-85d6-0e67ebf0e84a.__CR0,0,1464,600_PT0_SX1464_V1___.jpg" alt="Image 2">
+                <img src="https://m.media-amazon.com/images/S/aplus-media-library-service-media/935b25b7-315b-4ccb-8ccf-9307d2d9eeef.__CR0,0,1464,600_PT0_SX1464_V1___.jpg" alt="Image 2">
+
             </div>
         </div>
+
+        <br><br>
 
         <section>
             <div class="center-align"> <!-- Apply the center-align class here -->
@@ -500,25 +497,70 @@
 
             <br><br>
 
-            <div class="scrollable">
+            <div class="scrollable"> <!-- Wrap hot products in a container div with scrollbar -->
                 <div class="products">
                     <div class="product">
-                        <img src="top_selling_product1.jpg" alt="Top Selling Product 1">
-                        <h3>Top Selling Product 1</h3>
-                        <p>Description of Top Selling Product 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                        <p>Price: $129.99</p>
-                        <button>Add to Cart</button>
+                        <img src="https://m.media-amazon.com/images/I/71URTECp2jL._UX522_.jpg" alt="Hot Product 1">
+                        <h3 class="product-title">Casio G-Shock</h3>
+                        <span class="product-tag">For Men</span>
+                        <div class="product-description">
+                            <ul class="product-info">
+                                <li><i class="fas fa-tag"></i> Brand: Casio G-Shock </li>
+                                <li><i class="fas fa-paint-brush"></i> Color: Black</li>
+                                <li><i class="fas fa-clock"></i> Display Type : Digital</li>
+                                <li><i class="fas fa-swatchbook"></i> Strap: Rubber Strap</li>
+                            </ul>
+                        </div>
+                        <div class="buy-now-button">
+                            <a href="https://amzn.to/45cpqPI">
+                                <button class="buy-button">Buy Now</button>
+                            </a>
+                        </div>
                     </div>
 
                     <div class="product">
-                        <img src="top_selling_product2.jpg" alt="Top Selling Product 2">
-                        <h3>Top Selling Product 2</h3>
-                        <p>Description of Top Selling Product 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                        <p>Price: $99.99</p>
-                        <button>Add to Cart</button>
+                        <img src="https://m.media-amazon.com/images/I/71ierxriWGL._UY741_.jpg" alt="Hot Product 1">
+                        <h3 class="product-title">Q&Q</h3>
+                        <span class="product-tag">For Men</span>
+                        <div class="product-description">
+                            <ul class="product-info">
+                                <li><i class="fas fa-tag"></i> Brand: Q&Q </li>
+                                <li><i class="fas fa-paint-brush"></i> Color: Black</li>
+                                <li><i class="fas fa-clock"></i> Display Type : Digital</li>
+                                <li><i class="fas fa-swatchbook"></i> Strap: Rubber Strap</li>
+                            </ul>
+                        </div>
+                        <div class="buy-now-button">
+                            <a href="https://amzn.to/3tc27YN">
+                                <button class="buy-button">Buy Now</button>
+                            </a>
+                        </div>
                     </div>
+
+                    <div class="product">
+                        <img src="https://m.media-amazon.com/images/I/51iR-6F2aUL._SY879_.jpg" alt="Hot Product 1">
+                        <h3 class="product-title">V2A</h3>
+                        <span class="product-tag">For Women</span>
+                        <div class="product-description">
+                            <ul class="product-info">
+                                <li><i class="fas fa-tag"></i> Brand: V2A </li>
+                                <li><i class="fas fa-paint-brush"></i> Color: Black</li>
+                                <li><i class="fas fa-clock"></i> Display Type : Digital</li>
+                                <li><i class="fas fa-swatchbook"></i> Strap: Rubber Strap</li>
+                            </ul>
+                        </div>
+                        <div class="buy-now-button">
+                            <a href="https://amzn.to/3ZCTbI2">
+                                <button class="buy-button">Buy Now</button>
+                            </a>
+                        </div>
+                    </div>
+
+
                 </div>
             </div>
+            
+
         </section>
         <br><br>
 
@@ -532,18 +574,114 @@
             <div class="scrollable"> <!-- Wrap hot products in a container div with scrollbar -->
                 <div class="products">
                     <div class="product">
-                        <img src="https://m.media-amazon.com/images/I/61Hbj-hU44L._UX522_.jpg" alt="Hot Product 1">
-                        <h3 class="product-title">NIBOSI</h3>
+                        <img src="https://m.media-amazon.com/images/I/61Y5xjNO4lL._SX679_.jpg" alt="Hot Product 1">
+                        <h3 class="product-title">Noise Arc</h3>
+                        <span class="product-tag">For Both</span>
                         <div class="product-description">
                             <ul class="product-info">
-                                <li><i class="fas fa-tag"></i> Brand: NIBOSI </li>
+                                <li><i class="fas fa-tag"></i> Brand: Noise </li>
                                 <li><i class="fas fa-paint-brush"></i> Color: Black</li>
-                                <li><i class="fas fa-shoe-prints"></i> Face Type: An</li>
-                                <li><i class="fas fa-lock"></i> Strap: Lace-Up</li>
+                                <li><i class="fas fa-clock"></i> Face Type : Round</li>
+                                <li><i class="fas fa-clock"></i> Display Size: 1.38 Inches</li>
                             </ul>
                         </div>
                         <div class="buy-now-button">
-                            <a href="https://amzn.to/48CQqKQ">
+                            <a href="https://amzn.to/457VAMd">
+                                <button class="buy-button">Buy Now</button>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="product">
+                        <img src="https://m.media-amazon.com/images/I/612KJCoKyTL._SX679_.jpg" alt="Hot Product 1">
+                        <h3 class="product-title">Fire-Boltt Gladiator</h3>
+                        <span class="product-tag">For Both</span>
+                        <div class="product-description">
+                            <ul class="product-info">
+                                <li><i class="fas fa-tag"></i> Brand: Fire-Boltt </li>
+                                <li><i class="fas fa-paint-brush"></i> Color: Black</li>
+                                <li><i class="fas fa-clock"></i> Face Type : Rectangle</li>
+                                <li><i class="fas fa-clock"></i> Display Size: 1.96 Inches</li>
+                            </ul>
+                        </div>
+                        <div class="buy-now-button">
+                            <a href="https://amzn.to/3EX3Tjh">
+                                <button class="buy-button">Buy Now</button>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="product">
+                        <img src="https://m.media-amazon.com/images/I/819DWQLgjKL._SX679_.jpg" alt="Hot Product 1">
+                        <h3 class="product-title">Fire-Boltt Phoenix </h3>
+                        <span class="product-tag">For Women</span>
+                        <div class="product-description">
+                            <ul class="product-info">
+                                <li><i class="fas fa-tag"></i> Brand: Fire-Boltt </li>
+                                <li><i class="fas fa-paint-brush"></i> Color: Silver</li>
+                                <li><i class="fas fa-clock"></i> Face Type : Round</li>
+                                <li><i class="fas fa-clock"></i> Display Size: 1.39 Inches</li>
+                            </ul>
+                        </div>
+                        <div class="buy-now-button">
+                            <a href="https://amzn.to/3RGaxBO">
+                                <button class="buy-button">Buy Now</button>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="product">
+                        <img src="https://m.media-amazon.com/images/I/61CokKYg7XL._SX522_.jpg" alt="Hot Product 1">
+                        <h3 class="product-title">boAt Lunar </h3>
+                        <span class="product-tag">For Both</span>
+                        <div class="product-description">
+                            <ul class="product-info">
+                                <li><i class="fas fa-tag"></i> Brand: boAt  </li>
+                                <li><i class="fas fa-paint-brush"></i> Color: Black</li>
+                                <li><i class="fas fa-clock"></i> Face Type : Round</li>
+                                <li><i class="fas fa-clock"></i> Display Size: 1.39 Inches</li>
+                            </ul>
+                        </div>
+                        <div class="buy-now-button">
+                            <a href="https://amzn.to/3LKwb4i">
+                                <button class="buy-button">Buy Now</button>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="product">
+                        <img src="https://m.media-amazon.com/images/I/617ysOitciL._SX679_.jpg" alt="Hot Product 1">
+                        <h3 class="product-title">boAt Xtend </h3>
+                        <span class="product-tag">For Both</span>
+                        <div class="product-description">
+                            <ul class="product-info">
+                                <li><i class="fas fa-tag"></i> Brand: boAt </li>
+                                <li><i class="fas fa-paint-brush"></i> Color: Black</li>
+                                <li><i class="fas fa-clock"></i> Face Type : Rectangle</li>
+                                <li><i class="fas fa-clock"></i> Display Size: 1.69 Inches</li>
+                            </ul>
+                        </div>
+                        <div class="buy-now-button">
+                            <a href="https://amzn.to/48CshUG">
+                                <button class="buy-button">Buy Now</button>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="product">
+                        <img src="https://m.media-amazon.com/images/I/61d1Ogpqv1L._SX522_.jpg" alt="Hot Product 1">
+                        <h3 class="product-title">CrossBeats Apex Regal </h3>
+                        <span class="product-tag">For Both</span>
+                        <div class="product-description">
+                            <ul class="product-info">
+                                <li><i class="fas fa-tag"></i> Brand: CrossBeats </li>
+                                <li><i class="fas fa-paint-brush"></i> Color: Black</li>
+                                <li><i class="fas fa-clock"></i> Face Type : Round</li>
+                                <li><i class="fas fa-clock"></i> Display Size: 1.43 Inches</li>
+                            </ul>
+                        </div>
+                        <div class="buy-now-button">
+                            <a href="https://amzn.to/45ghg8R">
                                 <button class="buy-button">Buy Now</button>
                             </a>
                         </div>
@@ -559,9 +697,6 @@
             
     <script async src="https://static.addtoany.com/menu/page.js"></script>
     
-    <footer>
-        <p>&copy; 2023 Your Company Name</p>
-        <p>Contact Us: contact@yourcompany.com</p>
-    </footer>
+    
 </body>
 </html>
