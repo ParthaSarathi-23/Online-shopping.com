@@ -80,11 +80,11 @@
 
         /* Modify the .product class */
         .product {
-            flex: 0 0 calc(25% - 20px); /* Two products per row with spacing */
+            flex: 0 0 calc(28% - 20px); /* Two products per row with spacing */
             background-color: #fff;
             border: 1px solid #ccc;
             text-align: center;
-            height : 350px;
+            height : 435px;
             box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
             overflow: hidden; /* Hide any overflowing content within the card */
             border-radius: 25px;
@@ -93,6 +93,10 @@
         .product-description {
             padding: 10px; /* Add padding to the description container */
             text-align: left;
+            background-color: #f2f2f2; /* Add a background color */
+    border-radius: 10px; /* Add rounded corners */
+    margin: 20px 0; /* Add attractive margins at the top and bottom */
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
         }
 
         /* Specify a fixed height for each product card */
@@ -226,11 +230,11 @@
             }
 
             .product {
-                flex: 0 0 calc(60% - 20px); /* Two products per row with spacing */
+                flex: 0 0 calc(75% - 20px); /* Two products per row with spacing */
                 background-color: #fff;
                 border: 1px solid #ccc;
                 text-align: center;
-                height : 350px;
+                height : 435px;
                 box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
                 overflow: hidden;
             }
@@ -250,11 +254,11 @@
 
             /* For screens smaller than 480px (e.g., smartphones) */
         .product {
-            flex: 0 0 70%; /* One product per row, full width */
+            flex: 0 0 80%; /* One product per row, full width */
             background-color: #fff;
             border: 1px solid #ccc;
             text-align: center;
-            height : 350px;
+            height : 435px;
             box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
             overflow: hidden;
         }
@@ -274,6 +278,18 @@
         max-height: 300px; /* Ensure the image doesn't exceed the container height */
         object-fit: contain; /* Maintain aspect ratio while fitting within the container */
     }
+
+    /* Add this CSS code to style the product tags */
+.product-tag {
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: #007bff; /* Tag background color */
+    color: #fff; /* Tag text color */
+    font-size: 14px; /* Tag font size */
+    border-radius: 5px; /* Rounded corners for the tag */
+    margin-top: 5px; /* Add spacing between the tag and product title */
+}
+
 
     </style>
 
@@ -304,15 +320,15 @@
 
         <div class="fixed-page">
             <div class="image-container">
-                <img src="https://shubhamsharma3060.files.wordpress.com/2021/03/20210305_211441.jpg?w=1024" alt="Image 1">
-                <img src="https://shubhamsharma3060.files.wordpress.com/2021/03/20210305_211441.jpg?w=1024" alt="Image 1">
+                <img src="https://mir-s3-cdn-cf.behance.net/projects/404/f9fcfd142271391.Y3JvcCwyMjM0LDE3NDgsMTIxLDA.jpg" alt="Image 1">
+                <img src="https://www.passionateinmarketing.com/wp-content/uploads/2021/12/brandma-bata.jpg" alt="Image 1">
                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPcOPvK3lhcYVUZe7YcURIHnQ9MRVDCDo9RzB6mcqSZAMVm7dT7tyghmLzYqydEb3mt-w&usqp=CAU" alt="Image 2">
             </div>
         </div>
 
         <section>
             <div class="center-align"> <!-- Apply the center-align class here -->
-                <h2>Hot Products</h2>
+                <h2>Analog Watch</h2>
             </div>
 
             <br><br>
@@ -320,67 +336,157 @@
             <div class="scrollable"> <!-- Wrap hot products in a container div with scrollbar -->
                 <div class="products">
                     <div class="product">
-                        <img src="https://m.media-amazon.com/images/I/51WqJe7UhdL._UY695_.jpg" alt="Hot Product 1">
-                        <h3 class="product-title">BATA</h3>
+                        <img src="https://m.media-amazon.com/images/I/61Hbj-hU44L._UX522_.jpg" alt="Hot Product 1">
+                        <h3 class="product-title">NIBOSI</h3>
+                        <span class="product-tag">For Men</span>
                         <div class="product-description">
                             <ul class="product-info">
-                                <li><i class="fas fa-tag"></i> Brand: BATA</li>
-                                <li><i class="fas fa-paint-brush"></i> Color: [Add color here]</li>
-                                <li><i class="fas fa-shoe-prints"></i> Sole Type: Rubber</li>
-                                <li><i class="fas fa-lock"></i> Closure: Lace-Up</li>
+                                <li><i class="fas fa-tag"></i> Brand: NIBOSI </li>
+                                <li><i class="fas fa-paint-brush"></i> Color: Black</li>
+                                <li><i class="fas fa-clock"></i> Display Type : Analogue</li>
+                                <li><i class="fas fa-swatchbook"></i> Strap: Stainless Steel Strap</li>
                             </ul>
                         </div>
                         <div class="buy-now-button">
-                            <a href="https://amzn.to/3RLMeTn">
+                            <a href="https://amzn.to/48CQqKQ">
                                 <button class="buy-button">Buy Now</button>
                             </a>
                         </div>
                     </div>
 
                     <div class="product">
-                        <img src="https://m.media-amazon.com/images/I/71GIt0yxeBL._UY695_.jpg" alt="Hot Product 1">
-                        <h3>Paragon K1012G Men Casual Shoes | Stylish Walking </h3>
-                        <p>Description of Hot Product 1. Lorem ipsum dolor sit amet.</p>
-                        <a href="https://amzn.to/460XCif">
-                            <button>Buy Now</button>
-                        </a>
+                        <img src="https://m.media-amazon.com/images/I/61FFBTzKiUL._UX679_.jpg" alt="Hot Product 1">
+                        <h3 class="product-title">Fastrack</h3>
+                        <span class="product-tag">For Men</span>
+                        <div class="product-description">
+                            <ul class="product-info">
+                                <li><i class="fas fa-tag"></i> Brand: Fastrack </li>
+                                <li><i class="fas fa-paint-brush"></i> Color: Black</li>
+                                <li><i class="fas fa-clock"></i> Display Type : Analog</li>
+                                <li><i class="fas fa-swatchbook"></i> Strap: Rubber Strap</li>
+                            </ul>
+                        </div>
+                        <div class="buy-now-button">
+                            <a href="https://amzn.to/48CQqKQ">
+                                <button class="buy-button">Buy Now</button>
+                            </a>
+                        </div>
                     </div>
 
                     <div class="product">
-                        <img src="https://m.media-amazon.com/images/I/71YYFRuXmjL._UY695_.jpg" alt="Hot Product 1">
-                        <h3>ASIAN TARZAN-04 Men's Casual White Sneaker Shoes </h3>
-                        <p>Description of Hot Product 1. Lorem ipsum dolor sit amet.</p>
-                        <a href="https://amzn.to/3Pq5xhZ">
-                            <button>Buy Now</button>
-                        </a>
+                        <img src="https://m.media-amazon.com/images/I/71Kx6rgmlRS._UX522_.jpg" alt="Hot Product 1">
+                        <h3 class="product-title">TIMEX</h3>
+                        <span class="product-tag">For Men</span>
+                        <div class="product-description">
+                            <ul class="product-info">
+                                <li><i class="fas fa-tag"></i> Brand: Timex </li>
+                                <li><i class="fas fa-paint-brush"></i> Color: Brown</li>
+                                <li><i class="fas fa-clock"></i> Display Type : Analog</li>
+                                <li><i class="fas fa-swatchbook"></i> Strap: Leather Strap</li>
+                            </ul>
+                        </div>
+                        <div class="buy-now-button">
+                            <a href="https://amzn.to/3PVWeb4">
+                                <button class="buy-button">Buy Now</button>
+                            </a>
+                        </div>
                     </div>
 
                     <div class="product">
-                        <img src="https://m.media-amazon.com/images/I/71IqhHYq+DL._UX695_.jpg" alt="Hot Product 1">
-                        <h3>Sparx Mens Sm-747 Sneaker  </h3>
-                        <p>Description of Hot Product 1. Lorem ipsum dolor sit amet.</p>
-                        <a href="https://amzn.to/3PL3bfc">
-                            <button>Buy Now</button>
-                        </a>
+                        <img src="https://m.media-amazon.com/images/I/718cyugvbjL._UY679_.jpg" alt="Hot Product 1">
+                        <h3 class="product-title">TIMEX</h3>
+                        <span class="product-tag">For Men</span>
+                        <div class="product-description">
+                            <ul class="product-info">
+                                <li><i class="fas fa-tag"></i> Brand: Timex </li>
+                                <li><i class="fas fa-paint-brush"></i> Color: Silver</li>
+                                <li><i class="fas fa-clock"></i> Display Type : Analog</li>
+                                <li><i class="fas fa-swatchbook"></i> Strap: Stainless Steel Strap</li>
+                            </ul>
+                        </div>
+                        <div class="buy-now-button">
+                            <a href="https://amzn.to/3PVWeb4">
+                                <button class="buy-button">Buy Now</button>
+                            </a>
+                        </div>
                     </div>
 
                     <div class="product">
-                        <img src="https://m.media-amazon.com/images/I/81JETmRJe2L._UY695_.jpg" alt="Hot Product 1">
-                        <h3>US Polo Association Mens Abor Sneakers  </h3>
-                        <p>Description of Hot Product 1. Lorem ipsum dolor sit amet.</p>
-                        <a href="https://amzn.to/3PuUvIv">
-                            <button>Buy Now</button>
-                        </a>
+                        <img src="https://m.media-amazon.com/images/I/71S8hn6xv4L._UY741_.jpg" alt="Hot Product 1">
+                        <h3 class="product-title">TIMEX</h3>
+                        <span class="product-tag">For Women</span>
+                        <div class="product-description">
+                            <ul class="product-info">
+                                <li><i class="fas fa-tag"></i> Brand: Timex </li>
+                                <li><i class="fas fa-paint-brush"></i> Color: Pink</li>
+                                <li><i class="fas fa-clock"></i> Display Type : Analog</li>
+                                <li><i class="fas fa-swatchbook"></i> Strap: Stainless Steel Strap</li>
+                            </ul>
+                        </div>
+                        <div class="buy-now-button">
+                            <a href="https://amzn.to/45lxCgE">
+                                <button class="buy-button">Buy Now</button>
+                            </a>
+                        </div>
                     </div>
 
                     <div class="product">
-                        <img src="https://m.media-amazon.com/images/I/6162xoD9kqL._UY695_.jpg" alt="Hot Product 1">
-                        <h3>Centrino Mens 3211 Sneakers </h3>
-                        <p>Description of Hot Product 1. Lorem ipsum dolor sit amet.</p>
-                        <a href="https://amzn.to/3RAFjwd">
-                            <button>Buy Now</button>
-                        </a>
+                        <img src="https://m.media-amazon.com/images/I/61bcifMsxzL._UX679_.jpg" alt="Hot Product 1">
+                        <h3 class="product-title">Fastrack</h3>
+                        <span class="product-tag">For Women</span>
+                        <div class="product-description">
+                            <ul class="product-info">
+                                <li><i class="fas fa-tag"></i> Brand: Fastrack </li>
+                                <li><i class="fas fa-paint-brush"></i> Color: Pastel blue</li>
+                                <li><i class="fas fa-clock"></i> Display Type : Analog</li>
+                                <li><i class="fas fa-swatchbook"></i> Strap: Leather Strap</li>
+                            </ul>
+                        </div>
+                        <div class="buy-now-button">
+                            <a href="https://amzn.to/3LKqDqy">
+                                <button class="buy-button">Buy Now</button>
+                            </a>
+                        </div>
                     </div>
+
+                    <div class="product">
+                        <img src="https://m.media-amazon.com/images/I/61BB7rZiAcL._UX679_.jpg" alt="Hot Product 1">
+                        <h3 class="product-title">Fastrack</h3>
+                        <span class="product-tag">For Women</span>
+                        <div class="product-description">
+                            <ul class="product-info">
+                                <li><i class="fas fa-tag"></i> Brand: Fastrack </li>
+                                <li><i class="fas fa-paint-brush"></i> Color: Black</li>
+                                <li><i class="fas fa-clock"></i> Display Type : Analog</li>
+                                <li><i class="fas fa-swatchbook"></i> Strap: Stainless Steel Strap</li>
+                            </ul>
+                        </div>
+                        <div class="buy-now-button">
+                            <a href="https://amzn.to/46wZe3i">
+                                <button class="buy-button">Buy Now</button>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="product">
+                        <img src="https://m.media-amazon.com/images/I/51GsRxOlsqL._UX679_.jpg" alt="Hot Product 1">
+                        <h3 class="product-title">TIMEX</h3>
+                        <span class="product-tag">For Women</span>
+                        <div class="product-description">
+                            <ul class="product-info">
+                                <li><i class="fas fa-tag"></i> Brand: TIMEX </li>
+                                <li><i class="fas fa-paint-brush"></i> Color: Silver</li>
+                                <li><i class="fas fa-clock"></i> Display Type : Analog</li>
+                                <li><i class="fas fa-swatchbook"></i> Strap: Leather Strap</li>
+                            </ul>
+                        </div>
+                        <div class="buy-now-button">
+                            <a href="https://amzn.to/48DzxQy">
+                                <button class="buy-button">Buy Now</button>
+                            </a>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </section>
@@ -389,7 +495,7 @@
 
         <section>
             <div class="center-align">
-                <h2>Top Selling Products</h2>
+                <h2>Digital Watch</h2>
             </div>
 
             <br><br>
@@ -417,15 +523,37 @@
         <br><br>
 
         <section>
-            <h2>Offers</h2>
+            <div class="center-align"> <!-- Apply the center-align class here -->
+                <h2>Smart Watch</h2>
+            </div>
+
             <br><br>
-            <div class="scrollable"></div>
-                <div class="offer">
-                    <img src="offer_banner.jpg" alt="Special Offer">
-                    <p>Special Offer: Get 20% off on all products. Use code: SPECIAL20</p>
+
+            <div class="scrollable"> <!-- Wrap hot products in a container div with scrollbar -->
+                <div class="products">
+                    <div class="product">
+                        <img src="https://m.media-amazon.com/images/I/61Hbj-hU44L._UX522_.jpg" alt="Hot Product 1">
+                        <h3 class="product-title">NIBOSI</h3>
+                        <div class="product-description">
+                            <ul class="product-info">
+                                <li><i class="fas fa-tag"></i> Brand: NIBOSI </li>
+                                <li><i class="fas fa-paint-brush"></i> Color: Black</li>
+                                <li><i class="fas fa-shoe-prints"></i> Face Type: An</li>
+                                <li><i class="fas fa-lock"></i> Strap: Lace-Up</li>
+                            </ul>
+                        </div>
+                        <div class="buy-now-button">
+                            <a href="https://amzn.to/48CQqKQ">
+                                <button class="buy-button">Buy Now</button>
+                            </a>
+                        </div>
+                    </div>
+
+
                 </div>
             </div>
         </section>
+
 
     </main>
             
